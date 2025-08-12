@@ -12,7 +12,6 @@ in
 		[ # Include the results of the hardware scan.
 			./hardware-configuration.nix
 			./kde_plasma.nix
-			(import "${vars.home-manager}/nixos")
 		];
 
 	nix.settings.experimental-features = [ "nix-command" "flakes"]; # Enable flakes
@@ -23,11 +22,6 @@ in
 		description = "${vars.primaryUser}";
 		extraGroups = [ "networkmanager" "wheel" ];
 	};
-
-	home-manager.useUserPackages = true;
-	home-manager.useGlobalPkgs = true;
-	home-manager.backupFileExtension = "bak";
-	home-manager.users.${vars.primaryUser} = import ./home.nix;
 
 	# Programs
 	programs = {

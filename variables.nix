@@ -15,12 +15,11 @@ in
 
 	systemArchitecture = "x86_64-linux";
 
-	hostname = "nixos-machine";
+	hostname = "NixMachine";
 
 	primaryUser = "leha44581";
 	primaryUserTimezone = "Europe/Moscow";
 	primaryUserGit = "leha44581";
 	primaryUserEmail = "leha55481@gmail.com";
 
-	home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-${vars.systemVersion}.tar.gz";
 }
