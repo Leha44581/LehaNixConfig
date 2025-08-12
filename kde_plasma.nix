@@ -4,6 +4,9 @@ let
 	vars = import ./variables.nix;
 in
 
+	# Looking for customizations?
+	# Head to ./plasma-manager.nix
+
 {
 	# Remove KDE Plasma default apps
 	environment.plasma6.excludePackages = [

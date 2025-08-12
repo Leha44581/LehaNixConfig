@@ -5,6 +5,10 @@ let
 in
 
 {
+	imports = [
+		./plasma-manager.nix
+	];
+
 	home.username = "${vars.primaryUser}";
 	home.homeDirectory = "/home/${vars.primaryUser}";
 	home.stateVersion = "${vars.stateVersion}";
