@@ -11,6 +11,10 @@ in
 	# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
 	stateVersion = "25.05";
 
+	systemArchitecture = "x86_64-linux";
+
+	hostname = "nixos-machine";
+
 	primaryUser = "leha44581";
 	primaryUserTimezone = "Europe/Moscow";
 	primaryUserGit = "leha44581";
