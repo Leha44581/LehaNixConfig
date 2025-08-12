@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
+let
+	vars = import ./variables.nix;
+in
+
 {
 	# Remove KDE Plasma default apps
 	environment.plasma6.excludePackages = [

@@ -180,6 +180,6 @@ in
 
 	services.openssh.enable = true;				# Enable the OpenSSH daemon.
 
-	system.stateVersion = "${vars.stateVersion}"; # Did you read the comment?
+	system.stateVersion = "${vars.stateVersion}";	# Starting version, do not change
 
 }
