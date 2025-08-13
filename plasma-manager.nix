@@ -27,11 +27,11 @@ in
 
 		# Taskbar settings
 		panels = [
-			taskbar = {
+			{	# Taskbar settings
 				height = 40;		# Taskbar height
 				floating = false;	# Stops it from detaching, when no fullscreen apps are opened
-				location = bottom;	# Taskbar location
-				opacity = opaque;	# Taskbar transparency (can be set to opaque, adaptive, translucent)
+				#location = bottom;	# Taskbar location
+				#opacity = opaque;	# Taskbar transparency (can be set to opaque, adaptive, translucent)
 
 				# Widgets that should appear on the taskbar
 				# Some can be found with "find /nix/store -iname "*plasmoids*" " in the /share/plasma/plasmoids type directories
@@ -45,7 +45,7 @@ in
 					"org.kde.plasma.digitalclock"		# Digital Clock, shows date and time
 					"org.kde.plasma.showdesktop"
 				];
-			};
+			}
 		];
 	};
 }
