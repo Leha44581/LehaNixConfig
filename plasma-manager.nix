@@ -27,7 +27,7 @@ in
 
 			wallpaper = "/etc/nixos/assets/JunosRoom_1080_Wallpaper.png";	# Wallpaper, can be set to an image file or a KPackage (whatever that means)
 			# wallpaper = "/etc/nixos/assets/JunosRoom_original_4K_Wallpaper.png";	# Same Image but 4K
-			wallpaperFillMode =	"preserveAspectCrop"		# Wallpaper Fill Mode, can be set to pat, preserveAspectCrop, preserveAspectFit, stretch, tile, tileHorizontally, tileVertically
+			wallpaperFillMode =	"preserveAspectCrop";		# Wallpaper Fill Mode, can be set to pat, preserveAspectCrop, preserveAspectFit, stretch, tile, tileHorizontally, tileVertically
 
 			theme = null;									# Workspace theme (see availabe with "plasma-apply-desktoptheme --list-themes")
 
