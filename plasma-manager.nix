@@ -48,7 +48,7 @@ in
 			appearance = {
 				alwaysShowClock = true;		# Whether to always show the clock on the lock screen, even if the unlock dialog isn't shown
 				showMediaControls = true;	# Whether to show the media controls on the lock screen
-				wallpaper = "/etc/nixos/assets/NixOS_Wallpaper_Catppuccin_Macchiato_Trans_Edit.png";	# Lock Screen Wallpaper
+				wallpaper = "/etc/nixos/assets/NixOS_Wallpaper_Catppuccin_Macchiato_Trans_Edit_Darkened.webp";	# Lock Screen Wallpaper
 			};
 		};
 
