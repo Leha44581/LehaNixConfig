@@ -28,10 +28,14 @@ in
 		# Taskbar settings
 		panels = [
 			{	# Taskbar settings
-				height = 40;		# Taskbar height
-				floating = false;	# Stops it from detaching, when no fullscreen apps are opened
-				#location = bottom;	# Taskbar location
-				#opacity = opaque;	# Taskbar transparency (can be set to opaque, adaptive, translucent)
+				height = 40;			# Taskbar height
+				minLength = 1000;		# Taskbar Minimal Width
+				maxLength = null;		# Taskbar Maximal Width
+				lengthMode = "fill";	# Taskbar Width Mode (can be set to fit, fill, custom)
+				floating = false;		# Stops it from detaching, when no fullscreen apps are opened
+				location = "bottom";	# Taskbar location
+				opacity = "opaque";		# Taskbar transparency (can be set to opaque, adaptive, translucent)
+				hiding = "none";		# Taskbar behaviour when covered by windows (can be set to none, autohide, dodgewindows, windowsgobelow, normalpanel)
 
 				# Widgets that should appear on the taskbar
 				# Some can be found with "find /nix/store -iname "*plasmoids*" " in the /share/plasma/plasmoids type directories
@@ -48,9 +52,18 @@ in
 						# Specific ones can be found with "find /nix/store/*/share/applications -iname "*string*""
 						iconTasks = {
 							launchers = [
-								"applications:org.kde.konsole.desktop"				# Console/Shell
-								"applications:org.kde.dolphin.desktop"				# File Manager
-								"applications:org.kde.plasma-systemmonitor.desktop"	# System Monitor
+								"applications:org.kde.konsole.desktop"						# Console/Shell
+								"applications:org.kde.dolphin.desktop"						# File Manager
+								"applications:org.kde.plasma-systemmonitor.desktop"			# System Monitor
+								"applications:com.obsproject.Studio.desktop"				# OBS Studio
+								"applications:discord.desktop"								# Discord
+								"applications:steam.desktop"								# Steam
+								"applications:firefox.desktop"								# Firefox
+								"applications:AmneziaVPN.desktop"							# Amnezia VPN
+								"applications:obsidian.desktop"								# Obsidian
+								"applications:org.strawberrymusicplayer.strawberry.desktop"	# Strawberry Music Player
+								"applications:org.prismlauncher.PrismLauncher.desktop"		# Prism Launcher
+								"applications:org.telegram.desktop.desktop"					# Telegram Desktop
 							];
 						};
 					}
