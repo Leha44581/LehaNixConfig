@@ -10,7 +10,6 @@ in
 
 		# Themes
 		catppuccin-kde
-		whitesur-kde
 
 		# Widgets/plasmoids, bunch of stuff
 		kdePackages.plasma-workspace
@@ -21,8 +20,19 @@ in
 
 		enable = true;
 
+		kwin.borderlessMaximizedWindows = true;	# Whether to remove/hide the border of maximized windows
+
 		workspace = {
-			lookAndFeel = "org.kde.breezedark.desktop";	# Global theme (see available with "plasma-apply-lookandfeel --list")
+			lookAndFeel = "org.kde.breezedark.desktop";		# Global theme (see available with "plasma-apply-lookandfeel --list")
+
+			wallpaper = "/etc/nixos/assets/JunosRoom_1080_Wallpaper.png";	# Wallpaper, can be set to an image file or a KPackage (whatever that means)
+			# wallpaper = "/etc/nixos/assets/JunosRoom_original_4K_Wallpaper.png";	# Same Image but 4K
+			wallpaperFillMode =	"preserveAspectCrop"		# Wallpaper Fill Mode, can be set to pat, preserveAspectCrop, preserveAspectFit, stretch, tile, tileHorizontally, tileVertically
+
+			theme = null;									# Workspace theme (see availabe with "plasma-apply-desktoptheme --list-themes")
+
+			splashScreen.theme = "Catppuccin-Frappe-Blue";	# Splash Screen theme, can be set to None to disable (see global themes for options)
+			splashScreen.engine = null;						# Splash Screen engine, better left at null to let plasma figure it out
 		};
 
 		# Taskbar settings
