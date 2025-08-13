@@ -5,6 +5,12 @@ let
 in
 
 {
+	# This is where custom themes n stuff go
+	home.packages = with pkgs; [
+		catppuccin-kde
+		whitesur-kde
+	];
+
 	programs.plasma = {
 
 		enable = true;
