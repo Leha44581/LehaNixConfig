@@ -9,6 +9,7 @@ in
 	home.packages = with pkgs; [
 
 		# Themes
+		catppuccin
 		catppuccin-kde
 
 		# Widgets/plasmoids, bunch of stuff
@@ -35,7 +36,23 @@ in
 			splashScreen.engine = null;						# Splash Screen engine, better left at null to let plasma figure it out
 		};
 
-		# Taskbar settings
+		# Lock Screen Settings
+		kscreenlocker = {
+			lockOnResume = true;		# Lock the screen after sleep mode
+			lockOnStartup = true;		# Lock the screen on startup
+			passwordRequired = true;	# Whether the user password is required to unlock the screen
+			passwordRequiredDelay = 5;	# The time it takes in seconds for the password to be required after the screen is locked
+			timeout = 15;				# Timeout in minutes after which the screen will be locked
+
+			# Visual Settings
+			appearance = {
+				alwaysShowClock = true;		# Whether to always show the clock on the lock screen, even if the unlock dialog isn't shown
+				showMediaControls = true;	# Whether to show the media controls on the lock screen
+				wallpaper = "/etc/nixos/assets/NixOS_Wallpaper_Catppuccin_Macchiato_Trans_Edit.png";	# Lock Screen Wallpaper
+			};
+		};
+
+		# Panel settings
 		panels = [
 			{	# Taskbar settings
 				height = 40;			# Taskbar height
