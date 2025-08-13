@@ -37,13 +37,49 @@ in
 				# Some can be found with "find /nix/store -iname "*plasmoids*" " in the /share/plasma/plasmoids type directories
 				# Specific ones can be found with "find /nix/store/*/share/plasma/plasmoids -iname "*string*""
 				widgets = [
-					"org.kde.plasma.kickoff"
-					#"org.kde.plasma.pager"				# Switch between virtual desktops
-					"org.kde.plasma.icontasks"
-					"org.kde.plasma.marginsseparator"
-					"org.kde.plasma.systemtray"
+
+					{	# Kickoff settings (start menu icon)
+						kickoff = {
+							icon = "nix-snowflake-white";
+						};
+					}
+
+					{	# Task Icons, this is the flesh of the taskbar, without it, all widgets move to the left
+						# Specific ones can be found with "find /nix/store/*/share/applications -iname "*string*""
+						iconTasks = {
+							launchers = [
+								"applications:org.kde.konsole.desktop"				# Console/Shell
+								"applications:org.kde.dolphin.desktop"				# File Manager
+								"applications:org.kde.plasma-systemmonitor.desktop"	# System Monitor
+							];
+						};
+					}
+
+					"org.kde.plasma.marginsseparator"	# Margin Separator
+
+					{	# System Tray, contains things like sound/networking/keyboard language/brightness/etc.
+						# Some can be found with "find /nix/store -iname "*plasmoids*" " in the /share/plasma/plasmoids type directories
+						# Specific ones can be found with "find /nix/store/*/share/plasma/plasmoids -iname "*string*""
+						systemTray.items = {
+							shown = [
+								"org.kde.plasma.networkmanagement"
+								"org.kde.plasma.volume"
+								"org.kde.plasma.layout"	# Keyboard Layout
+							];
+
+							hidden = [
+								"org.kde.plasma.battery"
+								"org.kde.plasma.bluetooth"
+								"org.kde.plasma.clipboard"
+								"org.kde.plasma.brightness"
+								"org.kde.plasma.devicenotifier" # Device Notifier (notifies about removable devices)
+							];
+						};
+					}
+
 					"org.kde.plasma.digitalclock"		# Digital Clock, shows date and time
-					"org.kde.plasma.showdesktop"
+					#"org.kde.plasma.pager"				# Switch between virtual desktops
+					#"org.kde.plasma.showdesktop"
 				];
 			}
 		];
