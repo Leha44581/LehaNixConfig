@@ -80,6 +80,7 @@ in
 		gimp3			# Serious Image Editor
 
 		blender			# 3D Art Program
+		prusa-slicer	# 3D Print Slicer
 
 		discord			# Messenger
 		telegram-desktop	# Another messenger
@@ -89,6 +90,7 @@ in
 		amnezia-vpn		# Amnezia VPN Client
 
 		prismlauncher	# Minecraft Launcher
+		pufferpanel		# Minecraft Server GUI
 
 		deluge			# Torrent Client
 
@@ -99,11 +101,21 @@ in
 
 		gparted			# GUI Disk Partitioning tool
 
+		flatpak			# Flatpak Package Manager
+		flatpak-builder	# Flatpak Compiler
+
+		fastfetch		# Just like neofetch!
 		rsync			# CLI File Sync tool
 		unixtools.fdisk	# CLI Disk Partitioning tool
 		networkmanager	# CLI-GUI Networking tool
+		htop			# CLI-GUI System Monitor
 		gitui			# CLI-GUI for Git
 	];
+
+	services = {
+		openssh.enable = true;		# Enable OpenSSH | DO NOT TURN OFF
+		flatpak.enable = true;		# Flatpak
+	};
 
 	# Some programs need SUID wrappers, can be configured further or are
 	# started in user sessions.
@@ -171,8 +183,6 @@ in
 
 	boot.loader.systemd-boot.enable = true;		# Bootloader
 	boot.loader.efi.canTouchEfiVariables = true;
-
-	services.openssh.enable = true;				# Enable the OpenSSH daemon.
 
 	system.stateVersion = "${vars.stateVersion}";	# Starting version, do not change
 

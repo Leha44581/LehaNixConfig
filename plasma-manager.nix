@@ -105,6 +105,7 @@ in
 								"org.kde.plasma.networkmanagement"
 								"org.kde.plasma.volume"
 								"org.kde.plasma.layout"	# Keyboard Layout
+								"org.kde.plasma.cameraindicator"	# Camera indicator, lights up when the webcamera is being used
 							];
 
 							hidden = [
@@ -123,5 +124,26 @@ in
 				];
 			}
 		];
+	};
+
+	programs.kate = {	# Kate Text Editor Settings
+
+		editor = {		# Editing Settings
+
+			tabWidth = 4;				# Width of each indent level in spaces for tab
+
+			indent = {	# Indentation Settings
+
+				width = 4;					# Width of each indent level in spaces
+				replaceWithSpaces = false;	# Whether tabs should be converted to spaces
+				backspaceDecreaseIndent = true;	# Whether backspace should always decrease indentation by a full level
+
+				showLines = true;			# Whether to show the vertical lines that mark each indentation level
+			};
+		};
+	};
+
+	programs.okular = {
+		general.obeyDrm = false;	# I HATE DRM
 	};
 }
