@@ -105,6 +105,7 @@ in
 		flatpak-builder	# Flatpak Compiler
 
 		fastfetch		# Just like neofetch!
+		yt-dlp			# CLI tool to download
 		rsync			# CLI File Sync tool
 		unixtools.fdisk	# CLI Disk Partitioning tool
 		networkmanager	# CLI-GUI Networking tool
