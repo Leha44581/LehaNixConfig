@@ -28,6 +28,7 @@ in
 		nano.enable = false;			# Disable Nano (installed by default)
 		vim.enable = true;				# Vim Text Editor
 		firefox.enable = true;			# Firefox Web Browser
+		gamemode.enable = true;			# Lets you optimize system performance on demand, add gamemoderun %command% to steam launch options to use
 		steam = {						# Game Distribution platform
 			enable = true;
 			remotePlay.openFirewall = true;
@@ -135,6 +136,18 @@ in
 	# networking.firewall.allowedUDPPorts = [ ... ];
 	# Or disable the firewall altogether.
 	# networking.firewall.enable = false;
+
+	nix.optimise = {		# Storage optimizer, replaces same files with hard links every week
+		automatic = true;
+		dates = [ "weekly" ];
+	};
+
+	# This garbage collection is kinda bad, i would like to keep a couple last generations, instead of deleting everything older than a month
+	nix.gc = {	# Garbage Collection
+		automatic = true;
+		persistent = true;	# Stores the last time GC was run, so the runs aren't missed even if the device is powered off when the gc should run
+		dates = "monthly";	# Clean up the garbage monthly
+	};
 
 	time.timeZone = "${vars.primaryUserTimezone}"; 			# Timezone
 
