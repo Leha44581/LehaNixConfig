@@ -12,6 +12,7 @@ in
 		[ # Include the results of the hardware scan.
 			./hardware-configuration.nix
 			./kde_plasma.nix
+			./packages.nix
 		];
 
 	nix.settings.experimental-features = [ "nix-command" "flakes"]; # Enable flakes
@@ -69,49 +70,6 @@ in
 				colorscheme evening
 			'';
 		})
-
-		kdePackages.kcalc	# Calculator
-
-		vlc				# Video and general media player
-		strawberry		# Music player
-		baobab			# Disk Usage Space Analyzer
-		obsidian		# Markdown Note Taking app
-
-		pinta 			# Lightweight Drawing and Image Editing tool
-		gimp3			# Serious Image Editor
-
-		blender			# 3D Art Program
-		prusa-slicer	# 3D Print Slicer
-
-		discord			# Messenger
-		telegram-desktop	# Another messenger
-
-		steamcmd		# CLI version of steam
-
-		amnezia-vpn		# Amnezia VPN Client
-
-		prismlauncher	# Minecraft Launcher
-		pufferpanel		# Minecraft Server GUI
-
-		deluge			# Torrent Client
-
-		filezilla		# GUI FTP/SFTP/FTPS Client
-
-		ksnip			# Screenshot Capture Tool
-		obs-studio		# Video Recording and Live Streaming app
-
-		gparted			# GUI Disk Partitioning tool
-
-		flatpak			# Flatpak Package Manager
-		flatpak-builder	# Flatpak Compiler
-
-		fastfetch		# Just like neofetch!
-		yt-dlp			# CLI tool to download
-		rsync			# CLI File Sync tool
-		unixtools.fdisk	# CLI Disk Partitioning tool
-		networkmanager	# CLI-GUI Networking tool
-		htop			# CLI-GUI System Monitor
-		gitui			# CLI-GUI for Git
 	];
 
 	services = {

@@ -17,7 +17,7 @@
 		};
 	};
 
-	outputs = { self, nixpkgs, home-manager, plasma-manager, ... }@inputs:
+	outputs = inputs@{ self, nixpkgs, home-manager, plasma-manager, ... }:
 		let
 			lib = nixpkgs.lib;
 			vars = import ./variables.nix;
@@ -25,6 +25,7 @@
 		{
 			nixosConfigurations = {
 				${vars.hostname} = lib.nixosSystem {
+					specialArgs = {inherit inputs; };	# <- This is needed for unstable packages to work
 					system = "${vars.systemArchitecture}";
 					modules = [
 						./configuration.nix

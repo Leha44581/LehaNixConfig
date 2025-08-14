@@ -91,6 +91,8 @@ in
 								"applications:org.strawberrymusicplayer.strawberry.desktop"	# Strawberry Music Player
 								"applications:org.prismlauncher.PrismLauncher.desktop"		# Prism Launcher
 								"applications:org.telegram.desktop.desktop"					# Telegram Desktop
+								"applications:PrusaSlicer.desktop"							# PrusaSlicer
+								"applications:org.freecad.FreeCAD.desktop"					# FreeCAD
 							];
 						};
 					}
