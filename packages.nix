@@ -48,6 +48,8 @@ in
 
 			amnezia-vpn		# Amnezia VPN Client
 
+			librewolf		# Web Browser
+
 			prismlauncher	# Minecraft Launcher
 			pufferpanel		# Minecraft Server GUI
 

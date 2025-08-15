@@ -85,7 +85,7 @@ in
 								"applications:com.obsproject.Studio.desktop"				# OBS Studio
 								"applications:discord.desktop"								# Discord
 								"applications:steam.desktop"								# Steam
-								"applications:firefox.desktop"								# Firefox
+								"applications:librewolf.desktop"							# Firefox
 								"applications:AmneziaVPN.desktop"							# Amnezia VPN
 								"applications:obsidian.desktop"								# Obsidian
 								"applications:org.strawberrymusicplayer.strawberry.desktop"	# Strawberry Music Player
