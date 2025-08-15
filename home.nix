@@ -13,10 +13,18 @@ in
 	home.homeDirectory = "/home/${vars.primaryUser}";
 	home.stateVersion = "${vars.stateVersion}";
 
-	programs.git = {
-		enable = true;
-		userName = "vars.${vars.primaryUserGit}";
-		userEmail = "vars.${vars.primaryUserEmail}";
+	programs = {
+
+		fastfetch = {
+			enable = true;
+			settings = (builtins.readFile ./dotfiles/fastfetch.jsonc);
+		};
+
+		git = {
+			enable = true;
+			userName = "vars.${vars.primaryUserGit}";
+			userEmail = "vars.${vars.primaryUserEmail}";
+		};
 	};
 
 	home.packages = with pkgs; [
