@@ -17,7 +17,7 @@ in
 
 		fastfetch = {
 			enable = true;
-			settings = (builtins.readFile ./dotfiles/fastfetch.jsonc);
+			settings = (builtins.fromJSON (builtins.readFile ./dotfiles/fastfetch.jsonc));	# Read file as string, convert the string into proper values
 		};
 
 		git = {
