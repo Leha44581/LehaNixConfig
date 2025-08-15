@@ -41,10 +41,10 @@ if [ $# -eq 1 ]; then      # if help requested
                 printf "Using defaults..\n"
             ;;
         [nN0] ) printf "ok, doing nothing, exiting..\n"
-            exit 6;
+            exit 0;
             ;;
         *     ) printf "%b" "Doing nothing, exiting.."
-            exit 7;
+            exit 0;
             ;;
         esac
 fi
@@ -159,7 +159,7 @@ choose () {
             exit 0
             ;;
         [nN0] ) printf "Ok doing nothing exiting..\n"
-            exit 6;
+            exit 0;
             ;;
         *     ) printf "%b" "Unexpected answer '$answer'!" >&2
             exit 7;
@@ -222,10 +222,10 @@ generationsDiff=$((currentGen-oldestGen))
 ## Figure out what we should do, based on generations and options
 if [[ elapsedDays -le keepDays ]]; then
     printf "All generations are no more than %s days older than current generation. \nOldest gen days difference from current gen: %s \n\n\tNothing to do!\n" "$keepDays" "$elapsedDays"
-    exit 4;
+    exit 0;
 elif [[ generationsDiff -lt keepGens ]]; then
     printf "Oldest generation (%s) is only $generationsDiff generations behind current (%s). \n\n\t Nothing to do!\n" "$oldestGen" "$currentGen"
-    exit 5;
+    exit 0;
 else
     printf "\tSomething to do...\n"
     declare -a gens
