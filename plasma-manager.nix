@@ -21,7 +21,7 @@ in
 
 		enable = true;
 
-		kwin.borderlessMaximizedWindows = true;	# Whether to remove/hide the border of maximized windows
+		kwin.borderlessMaximizedWindows = false;	# Whether to remove/hide the border of maximized windows
 
 		workspace = {
 			lookAndFeel = "org.kde.breezedark.desktop";		# Global theme (see available with "plasma-apply-lookandfeel --list")
