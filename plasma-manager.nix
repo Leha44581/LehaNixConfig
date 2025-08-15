@@ -39,7 +39,7 @@ in
 		# Lock Screen Settings
 		kscreenlocker = {
 			lockOnResume = true;		# Lock the screen after sleep mode
-			lockOnStartup = true;		# Lock the screen on startup
+			lockOnStartup = false;		# Lock the screen on startup
 			passwordRequired = true;	# Whether the user password is required to unlock the screen
 			passwordRequiredDelay = 5;	# The time it takes in seconds for the password to be required after the screen is locked
 			timeout = 15;				# Timeout in minutes after which the screen will be locked
