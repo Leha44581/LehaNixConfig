@@ -22,4 +22,7 @@ in
 	primaryUserGit = "leha44581";
 	primaryUserEmail = "leha55481@gmail.com";
 
+	# How many generations should the garbage collector keep, Must be a string
+	nixGenKeep = "10";
+
 }

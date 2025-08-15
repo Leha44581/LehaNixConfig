@@ -13,6 +13,7 @@ in
 			./hardware-configuration.nix
 			./kde_plasma.nix
 			./packages.nix
+			./scripts.nix
 		];
 
 	nix.settings.experimental-features = [ "nix-command" "flakes"]; # Enable flakes
@@ -72,6 +73,7 @@ in
 		})
 	];
 
+	# Services to enable
 	services = {
 		openssh.enable = true;		# Enable OpenSSH | DO NOT TURN OFF
 		flatpak.enable = true;		# Flatpak
@@ -85,10 +87,6 @@ in
 	#	 enableSSHSupport = true;
 	# };
 
-	# List services that you want to enable:
-
-
-
 	# Open ports in the firewall.
 	# networking.firewall.allowedTCPPorts = [ ... ];
 	# networking.firewall.allowedUDPPorts = [ ... ];
@@ -98,13 +96,6 @@ in
 	nix.optimise = {		# Storage optimizer, replaces same files with hard links every week
 		automatic = true;
 		dates = [ "weekly" ];
-	};
-
-	# This garbage collection is kinda bad, i would like to keep a couple last generations, instead of deleting everything older than a month
-	nix.gc = {	# Garbage Collection
-		automatic = true;
-		persistent = true;	# Stores the last time GC was run, so the runs aren't missed even if the device is powered off when the gc should run
-		dates = "monthly";	# Clean up the garbage monthly
 	};
 
 	time.timeZone = "${vars.primaryUserTimezone}"; 			# Timezone

@@ -69,5 +69,6 @@ in
 			networkmanager	# CLI-GUI Networking tool
 			htop			# CLI-GUI System Monitor
 			gitui			# CLI-GUI for Git
+			bash			# Scripting Language
 		]);
 }
