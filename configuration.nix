@@ -1,6 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.	Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
 { config, pkgs, ... }:
 
 let
@@ -43,8 +40,7 @@ in
 	};
 
 
-	# List packages installed in system profile. To search, run:
-	# $ nix search wget
+	# Vim, it's included here, and not in packages.nix so you aren't left without a text editor if you fuck up
 	environment.systemPackages = with pkgs; [
 
 		# Vim config
@@ -78,21 +74,17 @@ in
 	services = {
 		openssh.enable = true;		# Enable OpenSSH | DO NOT TURN OFF
 		flatpak.enable = true;		# Flatpak
+		printing.enable = true;		# CUPS for printing stuff
+
+		# Sound Stuffs DO NOT CHANGE
+		pulseaudio.enable = false;
+		pipewire = {
+		enable = true;
+		alsa.enable = true;
+		alsa.support32Bit = true;
+		pulse.enable = true;
+		};
 	};
-
-	# Some programs need SUID wrappers, can be configured further or are
-	# started in user sessions.
-	# programs.mtr.enable = true;
-	# programs.gnupg.agent = {
-	#	 enable = true;
-	#	 enableSSHSupport = true;
-	# };
-
-	# Open ports in the firewall.
-	# networking.firewall.allowedTCPPorts = [ ... ];
-	# networking.firewall.allowedUDPPorts = [ ... ];
-	# Or disable the firewall altogether.
-	# networking.firewall.enable = false;
 
 	nix.optimise = {		# Storage optimizer, replaces same files with hard links every week
 		automatic = true;
@@ -124,25 +116,10 @@ in
 		"all"
 	];
 
-	services.printing.enable = true;			# Enable CUPS for printing stuff
-
 	# Enable sound with pipewire.
-	services.pulseaudio.enable = false;
 	security.rtkit.enable = true;
-	services.pipewire = {
-		enable = true;
-		alsa.enable = true;
-		alsa.support32Bit = true;
-		pulse.enable = true;
-		# If you want to use JACK applications, uncomment this
-		#jack.enable = true;
 
-		# use the example session manager (no others are packaged yet so this is enabled by default,
-		# no need to redefine it in your config for now)
-		#media-session.enable = true;
-	};
-
-	networking.hostName = "${vars.hostname}"; 				# Define your hostname.
+	networking.hostName = "${vars.hostname}"; 	# Define your hostname.
 	# networking.wireless.enable = true;		# Enables wireless support via wpa_supplicant.;
 
 	networking.networkmanager.enable = true; 	# Enable Networking
