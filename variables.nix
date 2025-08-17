@@ -25,4 +25,6 @@ in
 	# How many generations should the garbage collector keep, Must be a string
 	nixGenKeep = "10";
 
+	# Swap partition path
+	swapDevicePath = "/dev/NixOS/swap";
 }

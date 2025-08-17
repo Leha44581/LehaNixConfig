@@ -29,7 +29,8 @@ in
 	programs = {
 		nano.enable = false;			# Disable Nano (installed by default)
 		vim.enable = true;				# Vim Text Editor
-		firefox.enable = true;			# Firefox Web Browser
+		amnezia-vpn.enable = true;		# AmneziaVPN Client
+		firefox.enable = false;			# Firefox Web Browser
 		gamemode.enable = true;			# Lets you optimize system performance on demand, add gamemoderun %command% to steam launch options to use
 		steam = {						# Game Distribution platform
 			enable = true;
@@ -98,6 +99,10 @@ in
 		dates = [ "weekly" ];
 	};
 
+	swapDevices = [ {
+		device = "${vars.swapDevicePath}";
+	} ];
+
 	time.timeZone = "${vars.primaryUserTimezone}"; 			# Timezone
 
 	i18n.defaultLocale = "en_US.UTF-8";			# Default Language
@@ -136,8 +141,6 @@ in
 		# no need to redefine it in your config for now)
 		#media-session.enable = true;
 	};
-
-	nixpkgs.config.allowUnfree = true; 			# Allow unfree packages
 
 	networking.hostName = "${vars.hostname}"; 				# Define your hostname.
 	# networking.wireless.enable = true;		# Enables wireless support via wpa_supplicant.;

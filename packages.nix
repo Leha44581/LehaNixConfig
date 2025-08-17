@@ -13,10 +13,12 @@ in
 		(final: prev: {
 			unstable = import inputs.nixpkgs-unstable {
 				system = "${vars.systemArchitecture}";
+				config.allowUnfree = true;
 			};
 		})
 	];
 
+	nixpkgs.config.allowUnfree = true;	
 
 	environment.systemPackages = with pkgs.unstable; [
 
@@ -25,6 +27,11 @@ in
 		freecad			# 3D CAD Program
 		prusa-slicer	# 3D Print Slicer
 
+		discord			# Messenger
+
+		steam			# Game Distribution Platform
+		steamcmd		# CLI version of steam
+
 		yt-dlp			# CLI tool to download videos/music/etc. off the internet in bulk
 		]
 
@@ -32,7 +39,6 @@ in
 
 		# Stable packages
 		kdePackages.kcalc	# Calculator
-		gnome-characters	# Character Picker
 		unipicker			# Another Character Picker
 
 		vlc				# Video and general media player
@@ -43,10 +49,7 @@ in
 		pinta 			# Lightweight Drawing and Image Editing tool
 		gimp3			# Serious Image Editor
 
-		discord			# Messenger
 		telegram-desktop	# Another messenger
-
-		steamcmd		# CLI version of steam
 
 		amnezia-vpn		# Amnezia VPN Client
 
@@ -70,6 +73,7 @@ in
 		fastfetch		# Just like neofetch!
 		tldr			# Community driven man alternative
 		rsync			# CLI File Sync tool
+		lvm2			# CLI LVM Partitioning tool
 		unixtools.fdisk	# CLI Disk Partitioning tool
 		networkmanager	# CLI-GUI Networking tool
 		htop			# CLI-GUI System Monitor
