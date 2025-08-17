@@ -78,8 +78,6 @@ in
 
 		#nerd-fonts.m+	# All the nerd fonts :3
 		material-design-icons
-		material-icons
-		material-symbols
 		#nerd-fonts.noto
 		#nerd-fonts.hack
 		#nerd-fonts.tinos
