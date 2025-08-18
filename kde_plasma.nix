@@ -20,7 +20,7 @@ in
 		# pkgs.kdePackages.dolphin				# File Manager
 		# pkgs.kdePackages.baloo-widgets		# Baloo Widgets for Dolphin
 		# pkgs.kdePackages.dolphin-plugins		# Dolphin Plugins
-		pkgs.kdePackages.spectacle			# Screenshot Capture Utility
+		# pkgs.kdePackages.spectacle			# Screenshot Capture Utility
 		# pkgs.kdePackages.ffmpegthumbs
 		# pkgs.kdePackages.krdp					# Remote Desktop
 		# pkgs.kdePackages.xwaylandvideobridge

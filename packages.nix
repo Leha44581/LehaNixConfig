@@ -62,7 +62,7 @@ in
 
 		filezilla		# GUI FTP/SFTP/FTPS Client
 
-		ksnip			# Screenshot Capture Tool
+		#ksnip			# Screenshot Capture Tool	DOESNT WORK
 		obs-studio		# Video Recording and Live Streaming app
 
 		gparted			# GUI Disk Partitioning tool
@@ -77,7 +77,8 @@ in
 		unixtools.fdisk	# CLI Disk Partitioning tool
 		networkmanager	# CLI-GUI Networking tool
 		htop			# CLI-GUI System Monitor
-		gitui			# CLI-GUI for Git
+		#gitui			# CLI-GUI for Git
+		pciutils		# CLI Utils for hardware stuff i think?
 		bash			# Scripting Language
 
 		#nerd-fonts.m+	# All the nerd fonts :3

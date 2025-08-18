@@ -21,7 +21,14 @@ in
 
 		enable = true;
 
-		kwin.borderlessMaximizedWindows = false;	# Whether to remove/hide the border of maximized windows
+		# KDE Window Manager Settings
+		kwin = {
+			borderlessMaximizedWindows = false;	# Whether to remove/hide the border of maximized windows
+			edgeBarrier = 0;					# Additional distance the cursor needs to travel to cross screen edges in pixels
+			effects = {
+				fps.enable = false;				# Kwin's FPS performance graph in the screen corner
+			};
+		};
 
 		workspace = {
 			lookAndFeel = "org.kde.breezedark.desktop";		# Global theme (see available with "plasma-apply-lookandfeel --list")
