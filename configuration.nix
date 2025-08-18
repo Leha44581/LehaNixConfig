@@ -11,7 +11,7 @@ in
 			./kde_plasma.nix
 			./packages.nix
 			./scripts.nix
-			./nvigia.nix
+			./nvidia.nix
 		];
 
 	nix.settings.experimental-features = [ "nix-command" "flakes"]; # Enable flakes
