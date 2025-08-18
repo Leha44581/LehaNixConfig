@@ -52,6 +52,8 @@ in
 		pinta 			# Lightweight Drawing and Image Editing tool
 		gimp3			# Serious Image Editor
 
+		wireplumber		# Needed for OBS plugins
+
 		telegram-desktop	# Another messenger
 
 		amnezia-vpn		# Amnezia VPN Client
