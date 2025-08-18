@@ -58,6 +58,7 @@ in
 
 		librewolf		# Web Browser
 
+		ckan			# KSP Mod Manager
 		prismlauncher	# Minecraft Launcher
 		pufferpanel		# Minecraft Server GUI
 
