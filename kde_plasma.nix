@@ -6,6 +6,7 @@ in
 
 	# Looking for customizations?
 	# Head to ./plasma-manager.nix
+	# Unless you need KDE specific customization packages
 
 {
 	# Remove KDE Plasma default apps
@@ -24,6 +25,10 @@ in
 		# pkgs.kdePackages.ffmpegthumbs
 		# pkgs.kdePackages.krdp					# Remote Desktop
 		# pkgs.kdePackages.xwaylandvideobridge
+	];
+
+	environment.systemPackages = with pkgs.unstable; [
+		kdePackages.wallpaper-engine-plugin	# Wallpaper engine integration
 	];
 
 	# Essentials go down there \/

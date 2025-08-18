@@ -27,6 +27,8 @@ in
 		freecad			# 3D CAD Program
 		prusa-slicer	# 3D Print Slicer
 
+		alvr			# A VR thing
+
 		discord			# Messenger
 
 		steam			# Game Distribution Platform
@@ -79,6 +81,7 @@ in
 		htop			# CLI-GUI System Monitor
 		#gitui			# CLI-GUI for Git
 		pciutils		# CLI Utils for hardware stuff i think?
+		lsof			# CLI util to list open files
 		bash			# Scripting Language
 
 		#nerd-fonts.m+	# All the nerd fonts :3
