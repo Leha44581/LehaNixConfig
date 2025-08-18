@@ -28,6 +28,7 @@ in
 		prusa-slicer	# 3D Print Slicer
 
 		alvr			# A VR thing
+		android-tools	# Necessary for ALVR to work
 
 		discord			# Messenger
 

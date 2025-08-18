@@ -84,6 +84,7 @@ in
 
 					{	# Task Icons, this is the flesh of the taskbar, without it, all widgets move to the left
 						# Specific ones can be found with "find /nix/store/*/share/applications -iname "*string*""
+						# Or "find /home/${vars.primaryUser}/*/share/applications -iname "*string*""
 						iconTasks = {
 							launchers = [
 								"applications:org.kde.konsole.desktop"						# Console/Shell
@@ -97,6 +98,8 @@ in
 								"applications:obsidian.desktop"								# Obsidian
 								"applications:org.strawberrymusicplayer.strawberry.desktop"	# Strawberry Music Player
 								"applications:org.prismlauncher.PrismLauncher.desktop"		# Prism Launcher
+								"applications:alvr.desktop"									# AlVR
+								"applications:SteamVR.desktop"								# SteamVR
 								"applications:org.telegram.desktop.desktop"					# Telegram Desktop
 								"applications:PrusaSlicer.desktop"							# PrusaSlicer
 								"applications:org.freecad.FreeCAD.desktop"					# FreeCAD
