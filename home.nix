@@ -31,13 +31,16 @@ in
 	home.activation.folders = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
 		mkdir /home/${vars.primaryUser}/Stuff &&
 		mkdir /home/${vars.primaryUser}/Stuff/Steam &&
-		mkdir /home/${vars.primaryUser}/Stuff/SteamLibrary
+		mkdir /home/${vars.primaryUser}/Stuff/SteamLibrary &&
+		mkdir /home/${vars.primaryUser}/Stuff/PrismLauncher
 	'';
 
 	home.file = {
 		# Make symlink from steam's default library to $HOME/SteamLibrary
 		".local/share/Steam".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/Stuff/Steam";
 		"Stuff/Steam/steamapps/common".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/Stuff/SteamLibrary";
+
+		".local/share/PrismLauncher".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/Stuff/PrismLauncher";
 	};
 
 	home.packages = with pkgs; [
