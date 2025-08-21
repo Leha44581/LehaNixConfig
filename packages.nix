@@ -88,6 +88,7 @@ in
 		pciutils		# CLI Utils for hardware stuff i think?
 		lsof			# CLI util to list open files
 		bash			# Scripting Language
+		python3Full		# Programming Language
 
 		#nerd-fonts.m+	# All the nerd fonts :3
 		material-design-icons
