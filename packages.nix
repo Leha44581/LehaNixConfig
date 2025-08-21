@@ -84,6 +84,7 @@ in
 		lsof			# CLI util to list open files
 		bash			# Scripting Language
 		python3Full		# Programming Language
+		nodejs_20		# Another Programming Thing i need for the External Application Button browser extension to work
 
 		#nerd-fonts.m+	# All the nerd fonts :3
 		material-design-icons

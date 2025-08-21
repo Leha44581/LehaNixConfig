@@ -32,7 +32,8 @@ in
 		mkdir /home/${vars.primaryUser}/Stuff &&
 		mkdir /home/${vars.primaryUser}/Stuff/Steam &&
 		mkdir /home/${vars.primaryUser}/Stuff/SteamLibrary &&
-		mkdir /home/${vars.primaryUser}/Stuff/PrismLauncher
+		mkdir /home/${vars.primaryUser}/Stuff/PrismLauncher &&
+		mkdir /home/${vars.primaryUser}/.mozilla
 	'';
 
 	home.file = {
@@ -40,7 +41,11 @@ in
 		".local/share/Steam".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/Stuff/Steam";
 		"Stuff/Steam/steamapps/common".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/Stuff/SteamLibrary";
 
+		# Symlink from PrismLauncher default directory, to stuff
 		".local/share/PrismLauncher".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/Stuff/PrismLauncher";
+
+		# Symlink from firefox to librewolf, for yt-dlp to work
+		".mozilla/firefox".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/.librewolf";
 	};
 
 	home.packages = with pkgs; [
