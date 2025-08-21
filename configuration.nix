@@ -97,7 +97,7 @@ in
 	};
 
 	# Switch firefox policies to librewolf
-	environment.etc."firefox/policies/policies.json".target = "librewolf/policies/policies.json"
+	environment.etc."firefox/policies/policies.json".target = "librewolf/policies/policies.json";
 
 	# Vim, it's included here, and not in packages.nix so you aren't left without a text editor if you fuck up
 	environment.systemPackages = with pkgs; [
