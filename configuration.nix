@@ -36,6 +36,14 @@ in
 			dedicatedServer.openFirewall = true;
 			localNetworkGameTransfers.openFirewall = true;
 		};
+		
+		obs-studio = {					# Video Recording and Live Streaming app
+			enable = true;
+			plugins = with pkgs.obs-studio-plugins; [
+				obs-pipewire-audio-capture	# Application Audio Capture
+				obs-backgroundremoval
+			];
+		};
 
 		git.enable = true;				# CLI Version Management Utility
 	};
@@ -117,16 +125,26 @@ in
 		"all"
 	];
 
-	# Enable sound with pipewire.
 	security.rtkit.enable = true;
+	security.polkit.enable = true; # Needed for OBS Virtual Camera
 
 	networking.hostName = "${vars.hostname}"; 	# Define your hostname.
 	# networking.wireless.enable = true;		# Enables wireless support via wpa_supplicant.;
 
 	networking.networkmanager.enable = true; 	# Enable Networking
 
-	boot.loader.systemd-boot.enable = true;		# Bootloader
-	boot.loader.efi.canTouchEfiVariables = true;
+	# Bootloader
+	boot = {
+		loader.systemd-boot.enable = true;
+		loader.efi.canTouchEfiVariables = true;
+		extraModulePackages = with config.boot.kernelPackages; [
+			v4l2loopback	# Needed for OBS Virtual Camera to work
+		];
+		# Also for OBS \/
+		extraModprobeConfig = ''
+			options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
+		'';
+	};
 
 	system.stateVersion = "${vars.stateVersion}";	# Starting version, do not change
 

@@ -70,7 +70,6 @@ in
 		filezilla		# GUI FTP/SFTP/FTPS Client
 
 		#ksnip			# Screenshot Capture Tool	DOESNT WORK
-		obs-studio		# Video Recording and Live Streaming app
 
 		gparted			# GUI Disk Partitioning tool
 
