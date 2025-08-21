@@ -57,10 +57,6 @@ in
 
 		telegram-desktop	# Another messenger
 
-		amnezia-vpn		# Amnezia VPN Client
-
-		librewolf		# Web Browser
-
 		ckan			# KSP Mod Manager
 		prismlauncher	# Minecraft Launcher
 		pufferpanel		# Minecraft Server GUI
