@@ -37,6 +37,7 @@ in
 		steamcmd		# CLI version of steam
 
 		yt-dlp			# CLI tool to download videos/music/etc. off the internet in bulk
+		ffmpeg-full		# CLI Media Editing Utility
 		]
 
 		++ (with pkgs; [
