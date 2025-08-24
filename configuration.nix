@@ -77,6 +77,7 @@ in
 				};
 			};
 		};
+		thunderbird.enable = true;
 		gamemode.enable = true;			# Lets you optimize system performance on demand, add gamemoderun %command% to steam launch options to use
 		steam = {						# Game Distribution platform
 			enable = true;
