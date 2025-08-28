@@ -44,7 +44,10 @@ in
 					"privacy.trackingprotection.emailtracking.enabled" = true;
 					"privacy.trackingprotection.fingerprinting.enabled" = true;
 					"privacy.trackingprotection.socialtracking.enabled" = true;
+					"widget.use-xdg-desktop-portal.file-picker" = 1;	# Use Dolphin as the default file manager
 				};
+				# Extension ID can be found at about:debugging#/runtime/this-firefox
+				# This is a URL /\
 				ExtensionSettings = {	# Addon Parameters
 					"uBlock0@raymondhill.net" = {	# Ublock Origin
 						install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
@@ -72,6 +75,10 @@ in
                     };
                     "Tab-Session-Manager@sienoru" = {  # Tab Session Manager
                         install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-session-manager/latest.xpi";
+                        installation_mode = "force_installed";
+                    };
+                    "{cb31ec5d-c49a-4e5a-b240-16c767444f62}" = {  # Indie Wiki Buddy
+                        install_url = "https://addons.mozilla.org/firefox/downloads/latest/indie-wiki-buddy/latest.xpi";
                         installation_mode = "force_installed";
                     };
 				};
