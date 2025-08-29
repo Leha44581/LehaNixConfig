@@ -24,6 +24,7 @@ in
 		# KDE Window Manager Settings
 		kwin = {
 			borderlessMaximizedWindows = false;	# Whether to remove/hide the border of maximized windows
+			cornerBarrier = false;				# Whether to prevent the cursor from crossing at screen corners
 			edgeBarrier = 0;					# Additional distance the cursor needs to travel to cross screen edges in pixels
 			effects = {
 				fps.enable = false;				# Kwin's FPS performance graph in the screen corner
@@ -61,7 +62,7 @@ in
 
 		# Panel settings
 		panels = [
-			{	# Taskbar settings
+			{	# Main Taskbar settings
 				height = 40;			# Taskbar height
 				minLength = 1000;		# Taskbar Minimal Width
 				maxLength = null;		# Taskbar Maximal Width
@@ -70,6 +71,7 @@ in
 				location = "bottom";	# Taskbar location
 				opacity = "opaque";		# Taskbar transparency (can be set to opaque, adaptive, translucent)
 				hiding = "none";		# Taskbar behaviour when covered by windows (can be set to none, autohide, dodgewindows, windowsgobelow, normalpanel)
+				screen = 0;				# Which screens the panel should appear on 
 
 				# Widgets that should appear on the taskbar
 				# Some can be found with "find /nix/store -iname "*plasmoids*" " in the /share/plasma/plasmoids type directories
@@ -132,8 +134,79 @@ in
 					}
 
 					"org.kde.plasma.digitalclock"		# Digital Clock, shows date and time
-					#"org.kde.plasma.pager"				# Switch between virtual desktops
+					"org.kde.plasma.pager"				# Switch between virtual desktops
 					#"org.kde.plasma.showdesktop"
+				];
+			}
+
+			{	# Secondary Taskbar settings
+				height = 40;			# Taskbar height
+				minLength = 1000;		# Taskbar Minimal Width
+				maxLength = null;		# Taskbar Maximal Width
+				lengthMode = "fill";	# Taskbar Width Mode (can be set to fit, fill, custom)
+				floating = false;		# Stops it from detaching, when no fullscreen apps are opened
+				location = "bottom";	# Taskbar location
+				opacity = "opaque";		# Taskbar transparency (can be set to opaque, adaptive, translucent)
+				hiding = "none";		# Taskbar behaviour when covered by windows (can be set to none, autohide, dodgewindows, windowsgobelow, normalpanel)
+				screen = [ 1 ]; 		# Screens on which the panel should be shown, it's a list in case you have more than 2 monitors
+
+				# Widgets that should appear on the taskbar
+				# Some can be found with "find /nix/store -iname "*plasmoids*" " in the /share/plasma/plasmoids type directories
+				# Specific ones can be found with "find /nix/store/*/share/plasma/plasmoids -iname "*string*""
+				widgets = [
+
+					{	# Kickoff settings (start menu icon)
+						kickoff = {
+							icon = "nix-snowflake-white";
+						};
+					}
+
+					{	# Task Icons, this is the flesh of the taskbar, without it, all widgets move to the left
+						# Specific ones can be found with "find /nix/store/*/share/applications -iname "*string*""
+						# Or "find /home/${vars.primaryUser}/*/share/applications -iname "*string*""
+						iconTasks = {
+							launchers = [
+								"applications:org.kde.konsole.desktop"						# Console/Shell
+								"applications:org.kde.dolphin.desktop"						# File Manager
+								"applications:org.kde.plasma-systemmonitor.desktop"			# System Monitor
+								"applications:com.obsproject.Studio.desktop"				# OBS Studio
+								"applications:discord.desktop"								# Discord
+								"applications:steam.desktop"								# Steam
+								"applications:librewolf.desktop"							# Librewolf
+								"applications:thunderbird.desktop"							# Thunderbird Mail Client
+								"applications:AmneziaVPN.desktop"							# Amnezia VPN
+								"applications:obsidian.desktop"								# Obsidian
+								"applications:org.strawberrymusicplayer.strawberry.desktop"	# Strawberry Music Player
+								"applications:org.telegram.desktop.desktop"					# Telegram Desktop
+							];
+						};
+					}
+
+					"org.kde.plasma.marginsseparator"	# Margin Separator
+
+					{	# System Tray, contains things like sound/networking/keyboard language/brightness/etc.
+						# Some can be found with "find /nix/store -iname "*plasmoids*" " in the /share/plasma/plasmoids type directories
+						# Specific ones can be found with "find /nix/store/*/share/plasma/plasmoids -iname "*string*""
+						systemTray.items = {
+							shown = [
+								"org.kde.plasma.networkmanagement"
+								"org.kde.plasma.volume"
+								"org.kde.plasma.layout"	# Keyboard Layout
+								"org.kde.plasma.cameraindicator"	# Camera indicator, lights up when the webcamera is being used
+							];
+
+							hidden = [
+								"org.kde.plasma.battery"
+								"org.kde.plasma.bluetooth"
+								"org.kde.plasma.clipboard"
+								"org.kde.plasma.brightness"
+								"org.kde.plasma.devicenotifier" # Device Notifier (notifies about removable devices)
+							];
+						};
+					}
+
+					"org.kde.plasma.digitalclock"		# Digital Clock, shows date and time	
+					"org.kde.plasma.pager"				# Switch between virtual desktops
 				];
 			}
 		];

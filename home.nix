@@ -27,7 +27,7 @@ in
 		};
 	};
 
-		# Create some empty folders
+	# Create some empty folders
 	home.activation.folders = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
 		mkdir /home/${vars.primaryUser}/Stuff &&
 		mkdir /home/${vars.primaryUser}/Stuff/Steam &&
@@ -46,6 +46,9 @@ in
 
 		# Symlink from firefox to librewolf, for yt-dlp to work
 		".mozilla/firefox".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/.librewolf";
+
+		# Symlink for the Strawberry Music Player config
+		"/etc/nixos/dotfiles/strawberry.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/.config/strawberry/strawberry.conf";
 	};
 
 	home.packages = with pkgs; [

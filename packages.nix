@@ -46,6 +46,8 @@ in
 		kdePackages.kcalc	# Calculator
 		unipicker			# Another Character Picker
 
+		ungoogled-chromium	# Chromium (ew) for things that don't work in librewolf
+
 		vlc				# Video and general media player
 		strawberry		# Music player
 		baobab			# Disk Usage Space Analyzer
