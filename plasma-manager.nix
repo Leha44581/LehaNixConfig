@@ -101,6 +101,7 @@ in
 								"applications:discord.desktop"								# Discord
 								"applications:steam.desktop"								# Steam
 								"applications:librewolf.desktop"							# Librewolf
+								"applications:org.keepassxc.KeePassXC.desktop"				# KeePassXC Password Manager
 								"applications:thunderbird.desktop"							# Thunderbird Mail Client
 								"applications:AmneziaVPN.desktop"							# Amnezia VPN
 								"applications:obsidian.desktop"								# Obsidian

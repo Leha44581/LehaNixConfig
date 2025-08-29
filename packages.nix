@@ -31,6 +31,9 @@ in
 		sidequest		# Another VR thing
 		android-tools	# Necessary for ALVR to work
 
+		keepassxc		# Local Password Manager
+		kpcli			# Keepass CLI tool
+
 		discord			# Messenger
 
 		steam			# Game Distribution Platform
