@@ -29,6 +29,11 @@ in
 			effects = {
 				fps.enable = false;				# Kwin's FPS performance graph in the screen corner
 			};
+			
+			# Virtual Desktops Parameters
+			virtualDesktops = {
+				number = 2;
+			};
 		};
 
 		workspace = {
