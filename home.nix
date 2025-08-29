@@ -37,6 +37,8 @@ in
 	'';
 
 	home.file = {
+		# Ensure that all files are tracked by Git
+
 		# Make symlink from steam's default library to $HOME/SteamLibrary
 		".local/share/Steam".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/Stuff/Steam";
 		"Stuff/Steam/steamapps/common".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/Stuff/SteamLibrary";
@@ -48,7 +50,7 @@ in
 		".mozilla/firefox".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/.librewolf";
 
 		# Symlink for the Strawberry Music Player config
-		"/etc/nixos/dotfiles/strawberry.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/.config/strawberry/strawberry.conf";
+		"/home/${vars.primaryUser}/.config/strawberry/strawberry.conf".source = ./dotfiles/strawberry.conf;
 	};
 
 	home.packages = with pkgs; [
