@@ -80,8 +80,11 @@ in
 		flatpak			# Flatpak Package Manager
 		flatpak-builder	# Flatpak Compiler
 
+		nix-index		# Lets you know which file came from which package!
+
 		fastfetch		# Just like neofetch!
 		tldr			# Community driven man alternative
+		coreutils-full	# GNU Core Utilities, the essentials
 		rsync			# CLI File Sync tool
 		lvm2			# CLI LVM Partitioning tool
 		unixtools.fdisk	# CLI Disk Partitioning tool
