@@ -15,3 +15,4 @@ nvidia.nix - Nvidia Drivers, this is where the drivers are defined <br/>
 ###### Special thanks to: <br/>
 Aurakle <br/>
 Bizw <br/>
+llakala <br/>
