@@ -80,7 +80,7 @@ in
 		flatpak			# Flatpak Package Manager
 		flatpak-builder	# Flatpak Compiler
 
-		nix-indes		# Lets you find packages by files they provide! use nix-index and nix-locate 
+		nix-index		# Lets you find packages by files they provide! use nix-index and nix-locate 
 
 		fastfetch		# Just like neofetch!
 		tldr			# Community driven man alternative
