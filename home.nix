@@ -39,9 +39,13 @@ in
 	home.file = {
 		# Ensure that all files are tracked by Git
 
+		# Symlinks go as follows, source directory first, target directory second
 		# Make symlink from steam's default library to $HOME/SteamLibrary
 		".local/share/Steam".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/Stuff/Steam";
 		"Stuff/Steam/steamapps/common".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/Stuff/SteamLibrary";
+
+		# Make Symlink for VRChat Camera Pictures/Images/Photos/Screenshots/Whatever it's called
+		"Stuff/Steam/steamapps/compatdata/438100/pfx/drive_c/users/steamuser/Pictures/VRChat".source = config.lib.file.mkOutOfStoreSymlink "Stuff/Vrchat_Pictures";
 
 		# Symlink from PrismLauncher default directory, to stuff
 		".local/share/PrismLauncher".source = config.lib.file.mkOutOfStoreSymlink "/home/${vars.primaryUser}/Stuff/PrismLauncher";
