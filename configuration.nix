@@ -1,18 +1,24 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 let
 	vars = import ./variables.nix;
 in
 
 {
-	imports =
-		[ # Include the results of the hardware scan.
-			./hardware-configuration.nix
-			./kde_plasma.nix
-			./packages.nix
-			./scripts.nix
-			./nvidia.nix
-		];
+
+	# Disabled modules, like, if you wanna replace a whole module with one from the unstable branch, should be included in imports, since one can't just disable a module
+	disabledModules = [
+		"services/video/wivrn.nix"
+	];
+
+	imports = [ # Include the results of the hardware scan and a bunch of other stuff
+		./hardware-configuration.nix
+		./kde_plasma.nix
+		./packages.nix
+		./scripts.nix
+		./nvidia.nix
+		"${inputs.nixpkgs-unstable}/nixos/modules/services/video/wivrn.nix"
+	];
 
 	nix.settings.experimental-features = [ "nix-command" "flakes"]; # Enable flakes
 
@@ -83,7 +89,7 @@ in
 					};
 					"{762f9885-5a13-4abd-9c77-433dcd38b8fd}" = {	# Return Youtube Dislike
 						install_url = "https://addons.mozilla.org/firefox/downloads/latest/return-youtube-dislike/latest.xpi";
-						installation_mode = "force_installed"'
+						installation_mode = "force_installed";
 					};
 				};
 			};
@@ -105,7 +111,13 @@ in
 			];
 		};
 
-		git.enable = true;				# CLI Version Management Utility	
+		git.enable = true;				# CLI Version Management Utility
+		
+		alvr = {	# A VR thing
+			enable = true;
+			openFirewall = true;
+			package = pkgs.unstable.alvr;
+		};	
 	};
 
 	# Switch firefox policies to librewolf
@@ -154,6 +166,17 @@ in
 		alsa.enable = true;
 		alsa.support32Bit = true;
 		pulse.enable = true;
+		};
+	
+		wivrn = {	# Another VR thing
+			enable = true;
+			openFirewall = true;
+			autoStart = false; # Autostart service by default?
+			#highPriority = false;
+			defaultRuntime = false; # Should WiVRn be the default openXR runtime?
+			package = pkgs.unstable.wivrn;
+			steam.package = pkgs.unstable.steam;
+			steam.importOXRRuntimes = true; # Needed for steam to automatically discover wivrn server
 		};
 	};
 

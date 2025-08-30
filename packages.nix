@@ -29,8 +29,6 @@ in
 
 		libreoffice-fresh # A bunch of office apps
 
-		alvr			# A VR thing
-		sidequest		# Another VR thing
 		android-tools	# Necessary for ALVR to work
 
 		keepassxc		# Local Password Manager
