@@ -80,8 +80,6 @@ in
 		flatpak			# Flatpak Package Manager
 		flatpak-builder	# Flatpak Compiler
 
-		nix-index		# Lets you find packages by files they provide! use nix-index and nix-locate 
-
 		fastfetch		# Just like neofetch!
 		tldr			# Community driven man alternative
 		coreutils-full	# GNU Core Utilities, the essentials
@@ -109,43 +107,43 @@ in
 		#nerd-fonts._3270
 		nerd-fonts.ubuntu
 		#nerd-fonts.monoid
-        #nerd-fonts.lekton
-        #nerd-fonts.hurmit
-        #nerd-fonts.profont
-        #nerd-fonts.monofur
-        #nerd-fonts.iosevka
-        #nerd-fonts.hasklug
-        #nerd-fonts.go-mono
-        #nerd-fonts.cousine
-        nerd-fonts.zed-mono
-        nerd-fonts.overpass
-        nerd-fonts.mononoki
-        nerd-fonts.gohufont
-        nerd-fonts.d2coding
-        nerd-fonts._0xproto
-        #nerd-fonts.monaspace
-        nerd-fonts.fira-mono
-        nerd-fonts.fira-code
-        nerd-fonts.blex-mono
-        nerd-fonts.anonymice
-        nerd-fonts.space-mono
-        nerd-fonts.liberation
-        nerd-fonts.im-writing
-        nerd-fonts.heavy-data
-        nerd-fonts.geist-mono
-        nerd-fonts.victor-mono
-        #nerd-fonts.ubuntu-sans
-        #nerd-fonts.ubuntu-mono
-        nerd-fonts.roboto-mono
-        nerd-fonts.intone-mono
-        nerd-fonts.inconsolata
-        nerd-fonts.envy-code-r
-        nerd-fonts.commit-mono
-        nerd-fonts.symbols-only
-        nerd-fonts.martian-mono
-        nerd-fonts.iosevka-term
-        nerd-fonts.adwaita-mono
-        nerd-fonts.terminess-ttf
-        nerd-fonts.open-dyslexic
+		#nerd-fonts.lekton
+		#nerd-fonts.hurmit
+		#nerd-fonts.profont
+		#nerd-fonts.monofur
+		#nerd-fonts.iosevka
+		#nerd-fonts.hasklug
+		#nerd-fonts.go-mono
+		#nerd-fonts.cousine
+		nerd-fonts.zed-mono
+		nerd-fonts.overpass
+		nerd-fonts.mononoki
+		nerd-fonts.gohufont
+		nerd-fonts.d2coding
+		nerd-fonts._0xproto
+		#nerd-fonts.monaspace
+		nerd-fonts.fira-mono
+		nerd-fonts.fira-code
+		nerd-fonts.blex-mono
+		nerd-fonts.anonymice
+		nerd-fonts.space-mono
+		nerd-fonts.liberation
+		nerd-fonts.im-writing
+		nerd-fonts.heavy-data
+		nerd-fonts.geist-mono
+		nerd-fonts.victor-mono
+		#nerd-fonts.ubuntu-sans
+		#nerd-fonts.ubuntu-mono
+		nerd-fonts.roboto-mono
+		nerd-fonts.intone-mono
+		nerd-fonts.inconsolata
+		nerd-fonts.envy-code-r
+		nerd-fonts.commit-mono
+		nerd-fonts.symbols-only
+		nerd-fonts.martian-mono
+		nerd-fonts.iosevka-term
+		nerd-fonts.adwaita-mono
+		nerd-fonts.terminess-ttf
+		nerd-fonts.open-dyslexic
 	]);
 }

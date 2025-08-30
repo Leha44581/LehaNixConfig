@@ -52,42 +52,35 @@ in
 					"uBlock0@raymondhill.net" = {	# Ublock Origin
 						install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
 						installation_mode = "force_installed";
-      				};
+	  				};
 					"@shield-study-privacy" = {		# Privacy Badger
 						install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
 						installation_mode = "force_installed";
 					};
-                    "addon@darkreader.org" = {     	# Dark Reader
-                        install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
-                        installation_mode = "force_installed";
-                    };
-                    "sponsorBlocker@ajay.app" = {	# Sponsorblock
-                        install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
-                        installation_mode = "force_installed";
-                    };
-                    "dearrow@ajay.app" = {			# Dearrow
-                        install_url = "https://addons.mozilla.org/firefox/downloads/latest/dearrow/latest.xpi";
-                        installation_mode = "force_installed";
-                    };
-                    "user-agent-switcher@ninetailed.ninja" = {	# User Agent Switcher
-                        install_url = "https://addons.mozilla.org/firefox/downloads/latest/uaswitcher/latest.xpi";
-                        installation_mode = "force_installed";
-                    };
-                    "Tab-Session-Manager@sienoru" = {  # Tab Session Manager
-                        install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-session-manager/latest.xpi";
-                        installation_mode = "force_installed";
-                    };
-                    "{cb31ec5d-c49a-4e5a-b240-16c767444f62}" = {  # Indie Wiki Buddy
-                        install_url = "https://addons.mozilla.org/firefox/downloads/latest/indie-wiki-buddy/latest.xpi";
-                        installation_mode = "force_installed";
-                    };
-				};
-				
-				# Lets you know which file came from which package!
-				# Use nix-index to generate the database, then use nix-locate
-				nix-index = {
-					enable = true;
-					enableBashIntegration = true;
+					"addon@darkreader.org" = {	 	# Dark Reader
+						install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
+						installation_mode = "force_installed";
+					};
+					"sponsorBlocker@ajay.app" = {	# Sponsorblock
+						install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
+						installation_mode = "force_installed";
+					};
+					"dearrow@ajay.app" = {			# Dearrow
+						install_url = "https://addons.mozilla.org/firefox/downloads/latest/dearrow/latest.xpi";
+						installation_mode = "force_installed";
+					};
+					"user-agent-switcher@ninetailed.ninja" = {	# User Agent Switcher
+						install_url = "https://addons.mozilla.org/firefox/downloads/latest/uaswitcher/latest.xpi";
+						installation_mode = "force_installed";
+					};
+					"Tab-Session-Manager@sienoru" = {  # Tab Session Manager
+						install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-session-manager/latest.xpi";
+						installation_mode = "force_installed";
+					};
+					"{cb31ec5d-c49a-4e5a-b240-16c767444f62}" = {  # Indie Wiki Buddy
+						install_url = "https://addons.mozilla.org/firefox/downloads/latest/indie-wiki-buddy/latest.xpi";
+						installation_mode = "force_installed";
+					};
 				};
 			};
 		};
@@ -108,7 +101,7 @@ in
 			];
 		};
 
-		git.enable = true;				# CLI Version Management Utility
+		git.enable = true;				# CLI Version Management Utility	
 	};
 
 	# Switch firefox policies to librewolf
