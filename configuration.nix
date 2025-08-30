@@ -53,7 +53,7 @@ in
 						install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
 						installation_mode = "force_installed";
 	  				};
-					"@shield-study-privacy" = {		# Privacy Badger
+					"jid1-MnnxcxisBPnSXQ@jetpack" = {	# Privacy Badger
 						install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
 						installation_mode = "force_installed";
 					};
@@ -73,13 +73,17 @@ in
 						install_url = "https://addons.mozilla.org/firefox/downloads/latest/uaswitcher/latest.xpi";
 						installation_mode = "force_installed";
 					};
-					"Tab-Session-Manager@sienoru" = {  # Tab Session Manager
+					"Tab-Session-Manager@sienoru" = {			# Tab Session Manager
 						install_url = "https://addons.mozilla.org/firefox/downloads/latest/tab-session-manager/latest.xpi";
 						installation_mode = "force_installed";
 					};
-					"{cb31ec5d-c49a-4e5a-b240-16c767444f62}" = {  # Indie Wiki Buddy
+					"{cb31ec5d-c49a-4e5a-b240-16c767444f62}" = {	# Indie Wiki Buddy
 						install_url = "https://addons.mozilla.org/firefox/downloads/latest/indie-wiki-buddy/latest.xpi";
 						installation_mode = "force_installed";
+					};
+					"{762f9885-5a13-4abd-9c77-433dcd38b8fd}" = {	# Return Youtube Dislike
+						install_url = "https://addons.mozilla.org/firefox/downloads/latest/return-youtube-dislike/latest.xpi";
+						installation_mode = "force_installed"'
 					};
 				};
 			};
