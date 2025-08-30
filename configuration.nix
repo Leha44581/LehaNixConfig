@@ -82,6 +82,13 @@ in
                         installation_mode = "force_installed";
                     };
 				};
+				
+				# Lets you know which file came from which package!
+				# Use nix-index to generate the database, then use nix-locate
+				nix-index = {
+					enable = true;
+					enableBashIntegration = true;
+				};
 			};
 		};
 		thunderbird.enable = true;
