@@ -17,8 +17,6 @@ in
 		./librewolf.nix
 	];
 
-	nix.settings.experimental-features = [ "nix-command" "flakes"]; # Enable flakes
-
 	# Programs
 	programs = {
 		amnezia-vpn.enable = true;		# AmneziaVPN Client
@@ -39,9 +37,6 @@ in
 			];
 		};
 	};
-
-	# Switch firefox policies to librewolf
-	environment.etc."firefox/policies/policies.json".target = "librewolf/policies/policies.json";
 
 	# Services to enable
 	services = {
