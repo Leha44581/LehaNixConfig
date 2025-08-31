@@ -81,7 +81,7 @@ in
 		fastfetch		# Just like neofetch!
 		tldr			# Community driven man alternative
 		coreutils-full	# GNU Core Utilities, the essentials
-		metadata		# CLI Metadata parser for human consumption
+		#metadata		# CLI Metadata parser for human consumption
 		rsync			# CLI File Sync tool
 		lvm2			# CLI LVM Partitioning tool
 		unixtools.fdisk	# CLI Disk Partitioning tool
