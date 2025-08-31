@@ -6,6 +6,9 @@ let # This is technically not even needed here
 in
 
 {
+	# Switch firefox policies to librewolf
+	environment.etc."firefox/policies/policies.json".target = "librewolf/policies/policies.json";
+
 	programs = {
 		firefox = {	# Librewolf Web Browser
 			enable = true;
