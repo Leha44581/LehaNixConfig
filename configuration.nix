@@ -51,7 +51,16 @@ in
 			#key = ;	#Needed for https instead of http, but i can't be bothered rn
 			#cert = ;
 			settings = {
-				
+				devices = {
+					"MePhone" = { id = "AT7CLYE-PEGZMQH-ZIX5UVJ-B3LX2MS-JO2JLAA-LNUZ45J-CNGHK6P-YVOZGQD"; };
+				};
+				folders = {
+					"MusicStuffs" = {
+						path = "/home/${vars.primaryUser}/TheGreatArchive/MusicStuff";
+						devices = [ "MePhone" ];
+						ignorePerms = true;	# Don't sync file permissions
+					};
+				};
 			}:
 		};
 
