@@ -35,6 +35,7 @@ in
 		kpcli			# Keepass CLI tool
 
 		discord			# Messenger
+		revolt-desktop	# A better messanger
 
 		steam			# Game Distribution Platform
 		steamcmd		# CLI version of steam
