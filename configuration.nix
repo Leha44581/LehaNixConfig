@@ -43,6 +43,12 @@ in
 		flatpak.enable = true;		# Flatpak, yes i know it's imperative, it's also very convenient, just in case
 		printing.enable = true;		# CUPS for printing stuff
 
+		syncthing = {				# Syncthing, for syncing stuff
+			enable = true;
+			package = pkgs.unstable.syncthing;
+			user = "${vars.primaryUser}";
+		};
+
 		# Sound Stuffs DO NOT CHANGE
 		pulseaudio.enable = false;
 		pipewire = {
