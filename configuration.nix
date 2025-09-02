@@ -50,6 +50,8 @@ in
 			dataDir = "/home/${vars.primaryUser}/syncthing";
 			#key = ;	#Needed for https instead of http, but i can't be bothered rn
 			#cert = ;
+			#overrideDevices = true;	# Override any device changes made through WebUI
+			overrideFolders = true;	# Override any folder changes made through WebUI
 			settings = {
 				devices = {
 					"MePhone" = { id = "AT7CLYE-PEGZMQH-ZIX5UVJ-B3LX2MS-JO2JLAA-LNUZ45J-CNGHK6P-YVOZGQD"; };
@@ -58,6 +60,7 @@ in
 					"MusicStuffs" = {
 						path = "/home/${vars.primaryUser}/TheGreatArchive/MusicStuff";
 						devices = [ "MePhone" ];
+						type = "sendonly";	# Can be sendonly, receiveonly, sendreceive, receiveencrypted, pretty self explanatory
 						ignorePerms = true;	# Don't sync file permissions
 					};
 				};
