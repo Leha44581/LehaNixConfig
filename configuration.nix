@@ -47,6 +47,7 @@ in
 			enable = true;
 			package = pkgs.unstable.syncthing;
 			user = "${vars.primaryUser}";
+			dataDir = "/home/${vars.primaryUser}/syncthing";
 		};
 
 		# Sound Stuffs DO NOT CHANGE
