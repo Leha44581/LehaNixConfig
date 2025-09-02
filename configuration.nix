@@ -61,7 +61,7 @@ in
 						ignorePerms = true;	# Don't sync file permissions
 					};
 				};
-			}:
+			};
 		};
 
 		# Sound Stuffs DO NOT CHANGE
