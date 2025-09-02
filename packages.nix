@@ -83,9 +83,12 @@ in
 		flatpak			# Flatpak Package Manager
 		flatpak-builder	# Flatpak Compiler
 
+		syncthingtray	# Tray application for Syncthing
+
 		fastfetch		# Just like neofetch!
 		tldr			# Community driven man alternative
 		coreutils-full	# GNU Core Utilities, the essentials
+		stc-cli			# CLI Syncthing tool
 		#metadata		# CLI Metadata parser for human consumption
 		rsync			# CLI File Sync tool
 		lvm2			# CLI LVM Partitioning tool

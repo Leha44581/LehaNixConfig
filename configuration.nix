@@ -43,11 +43,16 @@ in
 		flatpak.enable = true;		# Flatpak, yes i know it's imperative, it's also very convenient, just in case
 		printing.enable = true;		# CUPS for printing stuff
 
-		syncthing = {				# Syncthing, for syncing stuff
+		syncthing = {				# Syncthing, for syncing stuff, runs on http://127.0.0.1:8384/
 			enable = true;
 			package = pkgs.unstable.syncthing;
 			user = "${vars.primaryUser}";
 			dataDir = "/home/${vars.primaryUser}/syncthing";
+			#key = ;	#Needed for https instead of http, but i can't be bothered rn
+			#cert = ;
+			settings = {
+				
+			}:
 		};
 
 		# Sound Stuffs DO NOT CHANGE
