@@ -37,8 +37,8 @@ in
 		discord			# Messenger
 		revolt-desktop	# FOSS Discord Alternative
 		fluffychat		# Matrix Chat Client
-		mautrix-discord	# Matrix-Discord Bridge
-		mautrix-telegram# Matrix-Telegram Bridge
+		#mautrix-discord	# Matrix-Discord Bridge
+		#mautrix-telegram# Matrix-Telegram Bridge
 
 		steam			# Game Distribution Platform
 		steamcmd		# CLI version of steam
