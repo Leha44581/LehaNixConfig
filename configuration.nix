@@ -86,13 +86,14 @@ in
 		device = "${vars.swapDevicePath}";
 	} ];
 
-	#fileSystems."/mnt/hard" = {	# Mount hard drive i use for backups
-	#	device = "/dev/disk/by-uuid/2402A1E702A1BE64";
-	#	fsType = ""; # Filesystem type
-	#	options = [
-	#		"nofail"
-	#	];
-	#};
+	fileSystems."/mnt/backups" = {	# Mount hard drive i use for backups
+		device = "${vars.backupDevicePath}";
+		fsType = "btrfs"; # Filesystem type
+		options = [
+			"nofail"
+			"x-gvfs-show"
+		];
+	};
 
 	security.rtkit.enable = true;
 	security.polkit.enable = true; # Needed for OBS Virtual Camera

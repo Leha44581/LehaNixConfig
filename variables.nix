@@ -27,4 +27,5 @@ in
 
 	# Swap partition path
 	swapDevicePath = "/dev/NixOS/swap";
+	backupDevicePath = "/dev/sda1";
 }
