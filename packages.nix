@@ -35,7 +35,8 @@ in
 		kpcli			# Keepass CLI tool
 
 		discord			# Messenger
-		revolt-desktop	# A better messanger
+		revolt-desktop	# FOSS Discord Alternative
+		fluffychat		# Matrix Chat Client
 
 		steam			# Game Distribution Platform
 		steamcmd		# CLI version of steam
