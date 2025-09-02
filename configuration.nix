@@ -82,9 +82,17 @@ in
 		dates = [ "weekly" ];
 	};
 
-	swapDevices = [ {
+	swapDevices = [ {		# Mount Swap partition
 		device = "${vars.swapDevicePath}";
 	} ];
+
+	#fileSystems."/mnt/hard" = {	# Mount hard drive i use for backups
+	#	device = "/dev/disk/by-uuid/2402A1E702A1BE64";
+	#	fsType = ""; # Filesystem type
+	#	options = [
+	#		"nofail"
+	#	];
+	#};
 
 	security.rtkit.enable = true;
 	security.polkit.enable = true; # Needed for OBS Virtual Camera

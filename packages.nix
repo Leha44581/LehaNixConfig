@@ -93,6 +93,7 @@ in
 		rsync			# CLI File Sync tool
 		lvm2			# CLI LVM Partitioning tool
 		unixtools.fdisk	# CLI Disk Partitioning tool
+		btrfs-progs		# CLI btrfs filesystem utilities
 		networkmanager	# CLI-GUI Networking tool
 		htop			# CLI-GUI System Monitor
 		#gitui			# CLI-GUI for Git
