@@ -99,6 +99,7 @@ in
 		pciutils		# CLI Utils for hardware stuff i think?
 		lsof			# CLI util to list open files
 		nth				# CLI Hash Identification Utility
+		tree			# CLI command to produce a depth indented directory listing
 		bash			# Scripting Language
 		python3Full		# Programming Language
 		nodejs_20		# Another Programming Thing i need for the External Application Button browser extension to work
