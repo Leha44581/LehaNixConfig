@@ -39,8 +39,9 @@ in
 
 		steam			# Game Distribution Platform
 		steamcmd		# CLI version of steam
-
+		
 		yt-dlp			# CLI tool to download videos/music/etc. off the internet in bulk
+		gallery-dl		# CLI tool to download image-galleries and collections from image-hosting sites
 		ffmpeg-full		# CLI Media Editing Utility
 		]
 
