@@ -43,6 +43,19 @@ in
 		flatpak.enable = true;		# Flatpak, yes i know it's imperative, it's also very convenient, just in case
 		printing.enable = true;		# CUPS for printing stuff
 
+		zapret = {	# DPI tool, for when VPN no work
+			enable = true;
+			package = pkgs.unstable.zapret;
+			httpSupport = true;
+			httpMode = "full";	# Can also be "first", changes whether DPI is active for the first packet of the session, or all packets
+			udpSupport = false; # Change to True later (Not that easy, look it up)
+			params = [	# Parameters, good to change sometimes, run "nix-shell -p zapret --command block" to check
+				"--dpi-desync=fake,disorder2"
+				"--dpi-desync-ttl=1"
+				"--dpi-desync-autottl=2"
+			 ];
+		};
+
 		syncthing = {				# Syncthing, for syncing stuff, runs on http://127.0.0.1:8384/
 			enable = true;
 			package = pkgs.unstable.syncthing;
