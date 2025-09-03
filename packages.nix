@@ -52,7 +52,7 @@ in
 
 		# Stable packages
 		kdePackages.kcalc	# Calculator
-		wl-clicker			# Wayland autoclicker
+		#wl-clicker			# Wayland autoclicker
 		unipicker			# Another Character Picker
 
 		ungoogled-chromium	# Chromium (ew) for things that don't work in librewolf
