@@ -7,6 +7,7 @@ librewolf.nix - Librewolf web browser configuration, extensions, privacy setting
 vr.nix - VR specific stuff, ALVR and WiVRn reside here <br/>
 home.nix - Home-manager configuration, this is where the dot files n stuff are defined <br/>
 plasma-manager.nix - Plasma-manager configuration, this is where all the customizations for KDE Plasma 6 go <br/>
+privacy.nix - VPN, DPI, all the stuff so the government won't get my ass <br/>
 
 ###### Ones you shouldn't touch if you don't know what you're doing
 kde_plasma.nix - Bunch of essentials for KDE Plasma to work at all <br/>
