@@ -42,7 +42,11 @@ in
 
 		steam			# Game Distribution Platform
 		steamcmd		# CLI version of steam
-		
+	
+		zapret			# DPI Bypass tool 1 (Main)
+		bepass			# DPI Bypass tool 2
+		byedpi			# DPI Bypass tool 3
+	
 		yt-dlp			# CLI tool to download videos/music/etc. off the internet in bulk
 		gallery-dl		# CLI tool to download image-galleries and collections from image-hosting sites
 		ffmpeg-full		# CLI Media Editing Utility

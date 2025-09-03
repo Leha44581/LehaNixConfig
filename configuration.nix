@@ -15,6 +15,11 @@ in
 		./nvidia.nix
 		./vr.nix
 		./librewolf.nix
+		"${inputs.nixpkgs-unstable}/nixos/modules/services/networking/byedpi.nix"
+	];
+
+	disabledModules = [	# Needed for byedpi options to work, requires the line above in imports
+		"services/networking/byedpi.nix"
 	];
 
 	# Programs
@@ -54,6 +59,21 @@ in
 				"--dpi-desync-ttl=1"
 				"--dpi-desync-autottl=2"
 			 ];
+		};
+
+		byedpi = {	# Another DPI tool, if shit hits the fan
+			enable = false;
+			package = pkgs.unstable.byedpi;
+			extraArgs = [
+				"--split"
+				"1"
+				"--disorder"
+				"3+s"
+				"--mod-http=h,d"
+				"--auto=torst"
+				"--tlsrec"
+				"1+s"
+			];
 		};
 
 		syncthing = {				# Syncthing, for syncing stuff, runs on http://127.0.0.1:8384/
